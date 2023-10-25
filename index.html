@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js"></script>
+    <title>Liame Company - Building a Better Tomorrow</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><img src="./img/logo.png" alt="Liame Company Logo"></div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#profile">Our Profile</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="header">
+        <h1>Welcome <span id="userName">Guest</span> to Liame Company</h1>
+        <p>Where Visionaries Unite to Create a Brighter Future</p>
+
+        <div class="imageContainer"><img src="./img/peopleImage.jpg" alt="Visionaries Unite"></div>
+    </div>
+
+    <div class="about" id="about">
+        <h2>About Us</h2>
+        <p>We are a dedicated group of individuals driven by a common goal—to make the world a better place to live.</p>
+        <p>Over the past decade, our commitment and passion have fueled our remarkable growth, thanks to the support of our incredible community.</p>
+        <p>If you share our ambition and values, we invite you to be a part of our journey.</p>
+        <p>Your future awaits with us.</p>
+
+        <button onclick="openModal()">Join Now</button>
+    </div>
+
+    <div class="profile" id="profile">
+        <h2>Our Profile</h2>
+        <h4>Our Vision</h4>
+        <p>At Liame Company, our vision is clear—to transform the world into a more prosperous and sustainable place for all.</p>
+        <h4>Our Mission</h4>
+        <p>We are on a mission to engage more people in our noble cause and collectively work to improve the state of the world.</p>
+    </div>
+
+    <div class="contacts" id="contact">
+        <h2>Contact Us</h2>
+        <p>We are always happy to hear from you. Please feel free to contact us at any time.</p>
+        <p>You can also drop us a line on our social media channels.</p>
+        <div class="socialMedia">
+            <a href="#"><img src="./img/wa.png" alt="WhatsApp"></a>
+            <a href="#"><img src="./img/ig.png" alt="Instagram"></a>
+        </div>
+    </div>
+
+    <div class="message-container">
+        <div class="message-form">
+            <h2>Message Us</h2>
+            <form id="messageForm" onsubmit="validateForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea><br><br>
+                
+                <button type="submit">Submit</button>
+            </form>
+            <div class="error-message" id="errorMessage"></div>
+        </div>
+        <div class="message-output">
+            <h2>Your Message</h2>
+            <div id="outputName"></div>
+            <div id="outputEmail"></div>
+            <div id="outputMessage"></div>
+        </div>
+    </div>
+
+    <div id="modalBackground" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Enter Your Name</h2>
+            <input type="text" id="nameInput">
+            <button onclick="updateName()">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
